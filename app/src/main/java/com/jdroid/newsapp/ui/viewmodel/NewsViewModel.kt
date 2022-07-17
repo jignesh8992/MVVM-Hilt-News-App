@@ -39,7 +39,7 @@ class NewsViewModel @Inject constructor(val app: Application, val newsRepository
                 val responseNews = newsRepository.getBreakingNews(countryCode, breakingNewsPageNumber)
                 breakingNews.postValue(handleBreakingNew(responseNews))
             } else {
-                breakingNews.postValue(Resource.Error("No Internet Connection"))
+                searchNews.postValue(Resource.NoNetworkConnectivity())
             }
         } catch (t: Throwable) {
             when (t) {
@@ -58,7 +58,7 @@ class NewsViewModel @Inject constructor(val app: Application, val newsRepository
                 val searchResponse = newsRepository.searchNews(searchQuery, searchPageNumber)
                 searchNews.postValue(handleSearchNews(searchResponse))
             } else {
-                searchNews.postValue(Resource.Error("No Internet Connection"))
+                searchNews.postValue(Resource.NoNetworkConnectivity())
             }
         } catch (t: Throwable) {
             when (t) {

@@ -76,6 +76,9 @@ class BreakingNewsFragment : Fragment() {
                         Snackbar.make(view, it, Snackbar.LENGTH_LONG).show()
                     }
                 }
+                is Resource.NoNetworkConnectivity -> {
+                    Log.i(TAG, "NoNetworkConnectivity")
+                }
             }
         }
 

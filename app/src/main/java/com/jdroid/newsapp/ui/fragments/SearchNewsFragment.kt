@@ -14,9 +14,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.jdroid.newsapp.R
-import com.jdroid.newsapp.ui.adapter.NewsAdapter
 import com.jdroid.newsapp.databinding.FragmentSearchNewsBinding
 import com.jdroid.newsapp.ui.NewsActivity
+import com.jdroid.newsapp.ui.adapter.NewsAdapter
 import com.jdroid.newsapp.ui.viewmodel.NewsViewModel
 import com.jdroid.newsapp.utilities.Constants
 import com.jdroid.newsapp.utilities.Constants.QUERY_DELAY
@@ -27,7 +27,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 
-class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
+class SearchNewsFragment : Fragment() {
     lateinit var mBinding: FragmentSearchNewsBinding
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
@@ -36,7 +36,7 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mBinding = FragmentSearchNewsBinding.inflate(inflater, container, false)
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return mBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -75,19 +75,24 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
 
             when (responseSearchNews) {
                 is Resource.Loading -> {
+                    Log.i(TAG, "Loading")
                     showProgress()
                 }
 
                 is Resource.Success -> {
                     hideProgress()
+                    Log.i(TAG, "Success")
                     responseSearchNews.data?.let {
                         newsAdapter.differ.submitList(it.articles)
+                        Log.i(TAG, "Success --> " + it.articles.size)
+
+
                         val totalPage = it.totalResults!! / Constants.QUERY_PAGE_SIZE + 2
                         isLastPage = viewModel.searchPageNumber == totalPage
                         if (isLastPage) {
                             mBinding.rvSearchNews.setPadding(0, 0, 0, 0)
                         }
-                    }
+                    } ?: Log.i(TAG, "Success --> null")
 
                 }
                 is Resource.Error -> {
@@ -97,6 +102,9 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news) {
                         Snackbar.make(view, it, Snackbar.LENGTH_LONG).show()
                     }
 
+                }
+                is Resource.NoNetworkConnectivity -> {
+                    Log.i(TAG, "NoNetworkConnectivity")
                 }
             }
 

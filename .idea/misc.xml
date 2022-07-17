@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MVVM/HiltNewsApp/app/src/main/res/layout/fragment_search_news.xml" value="0.31302083333333336" />
         <entry key="..\:/MVVM/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.31302083333333336" />
         <entry key="..\:/MVVM/NewsApp/app/src/main/res/layout/fragment_article.xml" value="0.31302083333333336" />
         <entry key="..\:/MVVM/NewsApp/app/src/main/res/layout/fragment_breaking_news.xml" value="0.31302083333333336" />
