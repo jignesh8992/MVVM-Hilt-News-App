@@ -46,6 +46,6 @@
         android:label="ArticleFragment" >
         <argument
             android:name="article"
-            app:argType="com.jdroid.newsapp.api.Article" />
+            app:argType="com.jdroid.newsapp.data.remote.Article" />
     </fragment>
 </navigation>

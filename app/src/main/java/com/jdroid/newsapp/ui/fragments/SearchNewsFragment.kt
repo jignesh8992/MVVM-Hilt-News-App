@@ -14,13 +14,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.jdroid.newsapp.R
-import com.jdroid.newsapp.adapter.NewsAdapter
+import com.jdroid.newsapp.ui.adapter.NewsAdapter
 import com.jdroid.newsapp.databinding.FragmentSearchNewsBinding
 import com.jdroid.newsapp.ui.NewsActivity
 import com.jdroid.newsapp.ui.viewmodel.NewsViewModel
-import com.jdroid.newsapp.utils.Constants
-import com.jdroid.newsapp.utils.Constants.QUERY_DELAY
-import com.jdroid.newsapp.utils.Resource
+import com.jdroid.newsapp.utilities.Constants
+import com.jdroid.newsapp.utilities.Constants.QUERY_DELAY
+import com.jdroid.newsapp.utilities.Resource
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay

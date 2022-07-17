@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.jdroid.newsapp.R
-import com.jdroid.newsapp.adapter.NewsAdapter
 import com.jdroid.newsapp.databinding.FragmentBreakingNewsBinding
 import com.jdroid.newsapp.ui.NewsActivity
+import com.jdroid.newsapp.ui.adapter.NewsAdapter
 import com.jdroid.newsapp.ui.viewmodel.NewsViewModel
-import com.jdroid.newsapp.utils.Constants.QUERY_PAGE_SIZE
-import com.jdroid.newsapp.utils.Resource
+import com.jdroid.newsapp.utilities.Constants.QUERY_PAGE_SIZE
+import com.jdroid.newsapp.utilities.Resource
 
 
 class BreakingNewsFragment : Fragment() {

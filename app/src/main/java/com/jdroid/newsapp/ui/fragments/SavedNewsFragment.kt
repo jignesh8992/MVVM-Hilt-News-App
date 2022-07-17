@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.jdroid.newsapp.R
-import com.jdroid.newsapp.adapter.NewsAdapter
+import com.jdroid.newsapp.ui.adapter.NewsAdapter
 import com.jdroid.newsapp.databinding.FragmentSavedNewsBinding
 import com.jdroid.newsapp.ui.NewsActivity
 import com.jdroid.newsapp.ui.viewmodel.NewsViewModel

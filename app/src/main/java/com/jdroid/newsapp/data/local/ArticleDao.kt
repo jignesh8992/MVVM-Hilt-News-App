@@ -1,4 +1,4 @@
-package com.jdroid.newsapp.db
+package com.jdroid.newsapp.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -6,7 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
-import com.jdroid.newsapp.api.Article
+import com.jdroid.newsapp.data.remote.Article
 
 @Dao
 interface ArticleDao {

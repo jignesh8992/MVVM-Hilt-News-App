@@ -1,6 +1,6 @@
-package com.jdroid.newsapp.api
+package com.jdroid.newsapp.data.remote
 
-import com.jdroid.newsapp.utils.Constants.API_KEY
+import com.jdroid.newsapp.utilities.Constants.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

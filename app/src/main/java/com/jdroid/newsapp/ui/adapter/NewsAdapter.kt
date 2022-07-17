@@ -1,4 +1,4 @@
-package com.jdroid.newsapp.adapter
+package com.jdroid.newsapp.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.jdroid.newsapp.api.Article
+import com.jdroid.newsapp.data.remote.Article
 import com.jdroid.newsapp.databinding.ListItemNewsBinding
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {

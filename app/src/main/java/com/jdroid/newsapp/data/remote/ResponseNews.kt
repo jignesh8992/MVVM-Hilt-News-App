@@ -1,4 +1,4 @@
-package com.jdroid.newsapp.api
+package com.jdroid.newsapp.data.remote
 
 
 import androidx.annotation.Keep

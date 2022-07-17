@@ -3,10 +3,10 @@ package com.jdroid.newsapp.di
 import android.content.Context
 import androidx.room.Room
 import com.jdroid.newsapp.BuildConfig
-import com.jdroid.newsapp.api.NewsAPI
-import com.jdroid.newsapp.db.NewsDatabase
-import com.jdroid.newsapp.utils.Constants
-import com.jdroid.newsapp.utils.Constants.ROOM_DATABASE_NAME
+import com.jdroid.newsapp.data.remote.NewsAPI
+import com.jdroid.newsapp.data.local.NewsDatabase
+import com.jdroid.newsapp.utilities.Constants
+import com.jdroid.newsapp.utilities.Constants.ROOM_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

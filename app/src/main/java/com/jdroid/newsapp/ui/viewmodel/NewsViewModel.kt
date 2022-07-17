@@ -10,10 +10,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.jdroid.newsapp.AppController
-import com.jdroid.newsapp.api.Article
-import com.jdroid.newsapp.api.ResponseNews
-import com.jdroid.newsapp.repository.NewsRepository
-import com.jdroid.newsapp.utils.Resource
+import com.jdroid.newsapp.data.remote.Article
+import com.jdroid.newsapp.data.remote.ResponseNews
+import com.jdroid.newsapp.data.repo.NewsRepository
+import com.jdroid.newsapp.utilities.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response

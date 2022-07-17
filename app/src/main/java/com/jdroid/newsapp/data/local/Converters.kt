@@ -1,6 +1,7 @@
-package com.jdroid.newsapp.api
+package com.jdroid.newsapp.data.local
 
 import androidx.room.TypeConverter
+import com.jdroid.newsapp.data.remote.Source
 
 
 class Converters {

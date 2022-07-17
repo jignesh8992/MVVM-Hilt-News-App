@@ -1,8 +1,8 @@
-package com.jdroid.newsapp.repository
+package com.jdroid.newsapp.data.repo
 
-import com.jdroid.newsapp.api.Article
-import com.jdroid.newsapp.api.NewsAPI
-import com.jdroid.newsapp.db.NewsDatabase
+import com.jdroid.newsapp.data.remote.Article
+import com.jdroid.newsapp.data.remote.NewsAPI
+import com.jdroid.newsapp.data.local.NewsDatabase
 import javax.inject.Inject
 
 class NewsRepository @Inject constructor(private val db: NewsDatabase, private val newsAPI: NewsAPI) {

@@ -1,4 +1,4 @@
-package com.jdroid.newsapp.utils
+package com.jdroid.newsapp.utilities
 
 object Constants {
     const val ROOM_DATABASE_NAME ="news_db.db"
